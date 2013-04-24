@@ -1,0 +1,17 @@
+.done-true {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#delete{
+    visibility: visible;
+    border: 0;
+}
+
+input[type="checkbox"] {
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="checklist.js"></script>
+    <link rel="stylesheet" href="checklist.css">
+  </head>
+  <body>
+    <div ng-controller="checklistCtrl">
+        <div>
+            Todos {{remaining()}} of {{todos.length}}&nbsp;
+            <input type="button" id="delete" ng-show="anyMarked" ng-click="deleteMarked()" value="Delete Marked" />
+        </div>
+        <ul ng-repeat="todo in todos">
+            <li>
+                <input type="checkbox" ng-model="todo.done" ng-change="marked()" />
+                <span class="done-{{todo.done}}"> {{todo.text}} </span>
+            </li>
+        </ul>
+        <form ng-submit="addTodo()">
+            <input type="text" placeholder="What todo?" ng-model="todoText" />
+            <input type="submit" value="Add" />
+        </form>
+    </div>
+  </body>
+</html>

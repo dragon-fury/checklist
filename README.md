@@ -1,4 +1,5 @@
-checklist
+Checklist
 =========
 
-First try at Angular JS
+First try at Angular JS.  
+Checklist kind of app.
